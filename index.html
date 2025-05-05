@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клуб ТАНДЕМ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <nav class="menu">
+            <a href="#" class="active"><span class="dot"></span>Афиша</a>
+            <a href="#">Билеты</a>
+            <a href="#">О Клубе</a>
+            <a href="#">Аренда</a>
+            <a href="#">Архив</a>
+            <a href="#">Контакты</a>
+        </nav>
+        <div class="logo">
+            <span class="logo-text" id="logo-home">TANDEM<br>PARTY</span>
+        </div>
+        <div class="contacts">
+            <span>
+                Zone club
+                Yekhezkel Rabinzon St 11, Petah Tikva, Israel</span>
+            <span class="search-icon"></span>
+        </div>
+    </div>
+    <section class="party-logo-section">
+        <img src="images/azmaut_party.jpg" alt="AZMAUT PARTY" class="party-logo-img">
+        <button id="show-party-btn" class="party-btn">Ближайшая вечеринка</button>
+        <div id="party-details" class="party-details" style="display:none;">
+            <div class="party-headline">
+                <div class="party-date">
+                    <span class="party-date-day">1 МАЯ</span><br>
+                    <span class="party-date-time">18:00 СР</span>
+                </div>
+                <div class="party-title">
+                    AZMAUT PARTY
+                </div>
+            </div>
+            <h2>AZMAUT PARTY</h2>
+            <p><b>TANDEM снова в деле!</b></p>
+            <p>1 мая отмечаем День Независимости Израиля в клубе ZONE — это будет взрыв музыки, света и свободы!</p>
+            <p>📍 <b>Yekhezkel Rabinzon 11, Petah Tikva</b></p>
+            <p>⏰ <b>18:00–23:00</b></p>
+            <p>✨ <b>Дресс-код:</b> бело-синий</p>
+            <p>Хотим стильные фотки — будет 2 фотографа и видеограф. Можем пофоткать отдельно.<br>Клуб будет украшен, атмосфера — максимум праздника!</p>
+            <div class="party-prices">
+                <span>🎫 <b>80₪</b> при репосте</span>
+                <span>💸 <b>100₪</b> — без репоста</span>
+                <span>🚪 <b>120₪</b> — на входе</span>
+                <span>🎽 <b>Футболка — 130₪</b> (предзаказ)</span>
+            </div>
+            <p>⚠️ <b>Только 300 билетов!</b> Продажи закроются — без брони, только покупка!</p>
+            <div class="party-program">
+                <span>🎧 DJ Daniel Malkin</span>
+                <span>🍸 Коктейли</span>
+                <span>🕺 Свобода и вайб TANDEM</span>
+            </div>
+            <p><b>Успей взять билет — это не просто тусовка. Это — TANDEM.</b></p>
+            <button class="buy-tickets-btn" onclick="window.location.href='tickets.html'">Купить билеты</button>
+        </div>
+    </section>
+    <section class="gallery-btn">
+        <img src="images/fotkitandem.jpg" alt="Фотки с тусовок" class="gallery-img">
+        <button class="gallery-text-btn" onclick="window.location.href='gallery.html'">Фотки с наших тусовок</button>
+    </section>
+    <script>
+        const btn = document.getElementById('show-party-btn');
+        const details = document.getElementById('party-details');
+        btn.addEventListener('click', () => {
+            if(details.style.display === 'none') {
+                details.style.display = 'block';
+                btn.textContent = 'Скрыть информацию';
+            } else {
+                details.style.display = 'none';
+                btn.textContent = 'Ближайшая вечеринка';
+            }
+        });
+        // Логотип как переход на главную с анимацией фона
+        document.getElementById('logo-home').addEventListener('click', function() {
+            location.reload();
+        });
+    </script>
+    <!-- Здесь будет афиша и остальной контент -->
+</body>
+</html>
